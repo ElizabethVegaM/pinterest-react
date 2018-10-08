@@ -33,7 +33,7 @@ class ImageModal extends Component {
             </button>
           </div>
         </div>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className="modal-lg">
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className="modal-lg image-modal">
           <ModalHeader toggle={this.toggle}>
             <Row>
               <button class="btn modal-circle-btn">

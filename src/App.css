@@ -35,6 +35,10 @@ body {
   padding: 4px 10px;
 }
 
+.header-options i {
+  padding-left: 5px;
+}
+
 .input-group {
   height: 40px;
   margin-top: 6px;
@@ -120,10 +124,10 @@ body {
 
 .pinterest-footer {
   position: fixed;
-  bottom: 14px;
-  right: 14px;
+  bottom: 0;
+  right: 0;
   text-align: center;
-  z-index: 660;
+  z-index: 1000;
 }
 
 .pinterest-footer .btn {
@@ -216,7 +220,7 @@ body {
   left: 15px;
 }
 
-.modal-header .close {
+.image-modal .close {
   display: none;
 }
 
@@ -302,6 +306,10 @@ body {
 
 /* Modal subir un pin */
 
+#uploadPin {
+  max-width: 700px!important;
+}
+
 .modal-dialog-centered {
   max-width: 804px;
   max-height: 548.8px;
@@ -386,4 +394,8 @@ form textarea {
   padding: 10px 14px;
   border-radius: 5px;
   color: #333;
+}
+
+.save-from {
+  padding-left: 10px;
 }
