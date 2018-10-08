@@ -212,6 +212,16 @@ body {
   border-radius: 100%;
   color: #8e8e8e;
   background: transparent;
+  position: absolute;
+  left: 15px;
+}
+
+.modal-header .close {
+  display: none;
+}
+
+.modal-btn-group {
+  margin-right: 11px;
 }
 
 #savePin {
@@ -263,6 +273,14 @@ body {
   color: rgb(142, 142, 142);
 }
 
+.right-info, .info-user {
+  align-items: center;
+}
+
+.info-user {
+  display: flex;
+}
+
 .info-user i {
   color: rgb(142, 142, 142);
   font-size: 40px;
@@ -271,11 +289,15 @@ body {
 .info-user span {
   font-size: 15px;
   position: absolute;
-  padding-left: 5px;
+  padding-left: 45px;
 }
 
 .info-pins {
   font-size: 15px;
+}
+
+.info-pins i {
+  padding-right: 5px;
 }
 
 /* Modal subir un pin */
