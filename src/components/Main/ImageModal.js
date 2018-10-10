@@ -26,7 +26,7 @@ class ImageModal extends Component {
     return (
       <div>
         <div class="pinWrapper card" onClick={this.toggle}>
-          <img src={this.props.url} class="imageResult" alt="" />
+          <img src={this.props.url} className="imageResult" alt="" />
           <div class="extra">
             <button class="btn pin-btn">
               <i class="fas fa-ellipsis-h"></i>

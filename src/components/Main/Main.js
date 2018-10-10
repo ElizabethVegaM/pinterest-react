@@ -3,12 +3,15 @@ import React, { Component } from 'react';
 import HeaderButtons from './HeaderButtons';
 import HeaderOptions from './HeaderOptions';
 import ImageModal from './ImageModal';
+import axios from 'axios';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 class Main extends Component {
   constructor() {
     super();
     this.state = {
-      quantity: 20,
+      quantity: 100,
+      url: 'https://pixabay.com/api',
       apiKey: '9790189-118fcad7d04fb9dc16cd5033c',
       search: '',
       pictures: []
@@ -16,32 +19,33 @@ class Main extends Component {
   }
 
   componentDidMount() {
-    fetch(`https://pixabay.com/api/?key=${this.state.apiKey}&q=${this.state.search}&per_page=${this.state.quantity}`)
-    .then(results => results.json()
-    ).then(data => {
-      let pictures = data.hits.map(pic => pic)
-      this.setState({pictures: pictures});
-    })
-  }
-
-  componentDidUpdate() {
-    fetch(`https://pixabay.com/api/?key=${this.state.apiKey}&q=${this.state.search}&per_page=20`)
-    .then(results => results.json()
-    ).then(data => {
-      let pictures = data.hits.map(pic => pic)
-      this.setState({pictures: pictures});
-    })
+    axios
+      .get(
+        `${this.state.url}/?key=${this.state.apiKey}&q=${this.state.search}&orientation=vertical&per_page=${this.state.quantity}&safesearch=true`)
+      .then(result => {
+        console.log(result.data.hits)
+        this.setState({ pictures: result.data.hits })
+      })
+      .catch(err => console.log(err));
   }
 
   handleChange (event) {
     if (event.key === 'Enter') {
       let input = document.getElementById('searchInput');
       this.setState({search: input.value})
-    }
+      axios
+      .get(
+        `${this.state.url}/?key=${this.state.apiKey}&q=${this.state.search}&orientation=vertical&per_page=${this.state.quantity}&safesearch=true`)
+      .then(result => {
+        console.log(result.data.hits)
+        this.setState({ pictures: result.data.hits })
+      })
+      .catch(err => console.log(err));
+     }
   }
 
   handleScroll() {
-    console.log('hola')
+    // console.log('hola')
   }
 
   render() {
@@ -66,9 +70,11 @@ class Main extends Component {
             buttons.map(button => <HeaderButtons name={button} />)
           }
         </div>
-        <div id="imageContainer" class="container-fluid main card-columns">
+        <div id="imageContainer" class="container-fluid main">
         {
-          this.state.pictures.map(pics => <ImageModal url={pics.largeImageURL} likes={pics.likes} />)
+          this.state.pictures.map(pics => <LazyLoadComponent>
+            <ImageModal url={pics.largeImageURL} likes={pics.likes} />
+          </LazyLoadComponent>)
         }
       </div>
       </div>
