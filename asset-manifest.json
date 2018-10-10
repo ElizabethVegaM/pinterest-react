@@ -1,13 +1,13 @@
 {
-  "main.css": "/pinterest-react/static/css/main.699eac07.chunk.css",
-  "main.js": "/pinterest-react/static/js/main.a271746f.chunk.js",
-  "main.js.map": "/pinterest-react/static/js/main.a271746f.chunk.js.map",
-  "static/js/1.bd656fb9.chunk.js": "/pinterest-react/static/js/1.bd656fb9.chunk.js",
-  "static/js/1.bd656fb9.chunk.js.map": "/pinterest-react/static/js/1.bd656fb9.chunk.js.map",
+  "main.css": "/pinterest-react/static/css/main.90790350.chunk.css",
+  "main.js": "/pinterest-react/static/js/main.508a93c0.chunk.js",
+  "main.js.map": "/pinterest-react/static/js/main.508a93c0.chunk.js.map",
+  "static/js/1.b85d279f.chunk.js": "/pinterest-react/static/js/1.b85d279f.chunk.js",
+  "static/js/1.b85d279f.chunk.js.map": "/pinterest-react/static/js/1.b85d279f.chunk.js.map",
   "runtime~main.js": "/pinterest-react/static/js/runtime~main.7bd47400.js",
   "runtime~main.js.map": "/pinterest-react/static/js/runtime~main.7bd47400.js.map",
-  "static/css/main.699eac07.chunk.css.map": "/pinterest-react/static/css/main.699eac07.chunk.css.map",
+  "static/css/main.90790350.chunk.css.map": "/pinterest-react/static/css/main.90790350.chunk.css.map",
   "index.html": "/pinterest-react/index.html",
-  "precache-manifest.cc7e70fb11f95009a2c51a8b57b769b8.js": "/pinterest-react/precache-manifest.cc7e70fb11f95009a2c51a8b57b769b8.js",
+  "precache-manifest.f0ab549edefdbb9c796cad0e6e5f725e.js": "/pinterest-react/precache-manifest.f0ab549edefdbb9c796cad0e6e5f725e.js",
   "service-worker.js": "/pinterest-react/service-worker.js"
 }
